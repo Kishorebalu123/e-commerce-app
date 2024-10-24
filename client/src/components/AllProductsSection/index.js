@@ -61,7 +61,7 @@ const AllProductsSection = () => {
 
     const jwtToken = Cookies.get('jwt_token');
 
-    const apiUrl = `http://localhost:5000/api/products?sort_by=${activeOptionId}&category=${activeCategoryId}&title_search=${searchInput}&rating=${activeRatingId}`;
+    const apiUrl = `https://e-commerce-app-7xqg.onrender.com/api/products?sort_by=${activeOptionId}&category=${activeCategoryId}&title_search=${searchInput}&rating=${activeRatingId}`;
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,

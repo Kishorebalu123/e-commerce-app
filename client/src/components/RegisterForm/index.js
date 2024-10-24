@@ -33,7 +33,7 @@ const RegisterForm = () => {
     const handleSubmit = async (values) => {
         try {
             const { username, password } = values;
-            const url = 'http://localhost:5000/api/auth/register';
+            const url = 'https://e-commerce-app-7xqg.onrender.com/api/auth/register';
             const options = {
                 method: 'POST',
                 headers: {
