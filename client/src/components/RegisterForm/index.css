@@ -1,0 +1,105 @@
+/* Main container */
+.register-main-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+}
+
+/* Form container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+/* Form title */
+.form-title {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styled form */
+.styled-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+/* Styled field */
+.styled-field {
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.styled-field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Password wrapper */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Password toggle icon */
+.password-toggle-icon {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Submit button */
+.submit-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message */
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.success-msg{
+  color: green;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+/* Media queries */
+@media (max-width: 600px) {
+  .submit-button {
+      font-size: 14px;
+  }
+}
