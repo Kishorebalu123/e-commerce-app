@@ -26,8 +26,9 @@ const ProductItemDetails = () => {
     const getProductData = async () => {
       setApiStatus(apiStatusConstants.inProgress);
 
+      const baseUrl=process.env.REACT_APP_API_URL
       const jwtToken = Cookies.get('jwt_token');
-      const apiUrl = `https://e-commerce-app-7xqg.onrender.com/api/products/${id}`;
+      const apiUrl = `${baseUrl}/api/products/${id}`;
       const options = {
         headers: {
           Authorization: `Bearer ${jwtToken}`,

@@ -36,7 +36,8 @@ const LoginForm = () => {
   };
 
   const handleSubmit = async (values) => {
-    const url = 'https://e-commerce-app-7xqg.onrender.com/api/auth/login';
+    const baseUrl=process.env.REACT_APP_API_URL
+    const url = `${baseUrl}/api/auth/login`;
     const options = {
       method: 'POST',
       headers: {
