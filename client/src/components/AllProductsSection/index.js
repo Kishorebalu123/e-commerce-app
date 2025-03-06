@@ -7,6 +7,7 @@ import FiltersGroup from '../FiltersGroup';
 import ProductCard from '../ProductCard';
 import ProductsHeader from '../ProductsHeader';
 
+
 import './index.css';
 
 const categoryOptions = [
@@ -60,8 +61,9 @@ const AllProductsSection = () => {
     setApiStatus(apiStatusConstants.inProgress);
 
     const jwtToken = Cookies.get('jwt_token');
-
-    const apiUrl = `https://e-commerce-app-7xqg.onrender.com/api/products?sort_by=${activeOptionId}&category=${activeCategoryId}&title_search=${searchInput}&rating=${activeRatingId}`;
+    const baseUrl=process.env.REACT_APP_API_URL
+    console.log(baseUrl)
+    const apiUrl = `${baseUrl}/api/products?sort_by=${activeOptionId}&category=${activeCategoryId}&title_search=${searchInput}&rating=${activeRatingId}`;
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
